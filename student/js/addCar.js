@@ -19,9 +19,3 @@ $.get("/manufacturerNames", function (names) {
         $("#manufacturer").append('<option value="' +  name + '">' + name + '</option>');
     });
 });
-
-/*$.getJSON("manufacturers", function(data){
-    $.each(data, function (key, value){
-        $("#manufacturer").append('<option value="' +  value.name + '">' + value.name + '</option>');
-    });
-});*/
