@@ -39,15 +39,15 @@ function listManufacturers(){
         var table = $('<table id="listTable"></table>');
         table.append("<tr><th>Name</th><th>Country</th><th>Founded</th>");
 
-            $.each(data, function (key, value){
-                var row = $('<tr></tr>');
-                var nameCellData = $('<td id="nameCellData" onclick="addCookie(' + "'" + value.name + "'" +')">' + value.name + '</td>');
-                var countryCellData = $('<td>' + value.country + '</td>');
-                var foundedCellData = $('<td>' + value.founded + '</td>');
+        $.each(data, function (key, value){
+            var row = $('<tr></tr>');
+            var nameCellData = $('<td id="nameCellData" onclick="addCookie(' + "'" + value.name + "'" +')">' + value.name + '</td>');
+            var countryCellData = $('<td>' + value.country + '</td>');
+            var foundedCellData = $('<td>' + value.founded + '</td>');
 
-                row.append(nameCellData, countryCellData, foundedCellData);
-                table.append(row);
-            });
+            row.append(nameCellData, countryCellData, foundedCellData);
+            table.append(row);
+        });
 
         contentId.append(table);
 
